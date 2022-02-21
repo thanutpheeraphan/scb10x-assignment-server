@@ -5,7 +5,6 @@ module.exports = async (req,res,next) => {
 	try{
 
 		const token = req.header("jwt_token");
-		console.log(token);
 
 		if (!token){
 			return res.status(403).json("Not Authorize in Token");

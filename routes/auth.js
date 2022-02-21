@@ -38,7 +38,6 @@ router.post("/register", validInfo, async(req,res)=>{
 		//5. generating the token
 
 		const jwtToken = jwtGenerator(newUser.rows[0].user_id);
-		console.log(jwtToken);
 		return res.json({ jwtToken });
 
 	}catch(err){
